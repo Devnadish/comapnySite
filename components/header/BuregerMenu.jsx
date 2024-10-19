@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
@@ -26,16 +24,15 @@ export default function BuregerMenu({ navigation, lang }) {
         position="right"
         className="w-72 flex flex-col items-start justify-between"
       >
-        <SheetHeader>
-          <SheetTitle>Excited To Serve You</SheetTitle>
-          <SheetDescription>
-            Welcome! I'm here to assist you with all your needs, from answering
-            questions to providing insights. Let’s explore new ideas together!
+        <SheetHeader className="w-full justify-center items-center">
+          <SheetTitle>{navigation.sheetTilte}</SheetTitle>
+          <SheetDescription className="w-full justify-center items-center text-center">
+            {navigation.sheetDesction}
           </SheetDescription>
         </SheetHeader>
         <MenuItems lang={lang} navigation={navigation} />
 
-        <SheetFooter>
+        <SheetFooter className="w-full justify-center items-center">
           <LanguageSwitcher />
         </SheetFooter>
       </SheetContent>

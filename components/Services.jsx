@@ -19,7 +19,7 @@ async function Services({ lang, title = "We Grantee The Following" }) {
   const data = service(services);
 
   return (
-    <Collabs title={title} icon={<IcRoundTouchApp />}>
+    <Collabs title={title} icon={<IcRoundTouchApp />} lang={lang}>
       {data?.data?.map((willdo) => {
         return (
           <InfoBox

@@ -35,7 +35,7 @@ export default function CarouselImage({
   }, [api]);
 
   return (
-    <main className="flex flex-col items-center justify-between">
+    <main className="flex flex-col items-center justify-between" dir="ltr">
       <Carousel
         setApi={setApi}
         opts={{ loop: true }}

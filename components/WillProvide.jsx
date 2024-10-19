@@ -14,7 +14,11 @@ async function WillProvide({ lang, title = "We Grantee The Following" }) {
 
   const data = willProvide(provide);
   return (
-    <Collabs title={title} icon={<MaterialSymbolsPartnerExchange />}>
+    <Collabs
+      title={title}
+      icon={<MaterialSymbolsPartnerExchange />}
+      lang={lang}
+    >
       {data?.data?.map((willdo) => {
         return (
           <InfoBox

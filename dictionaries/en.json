@@ -10,10 +10,19 @@
     "price": "Prices",
     "sample": "My works",
     "blog": "Blog",
-    "serves": "service"
+    "serves": "service",
+    "sheetTilte": "Excited To Serve You",
+    "sheetDesction": " Welcome! I'm here to assist you with all your needs, from answering   questions to providing insights. Let’s explore new ideas together!"
   },
   "page": {
     "about": {
+      "homePage": {
+        "ensure": "We Ensure",
+        "foryou": "Exclusively yours",
+        "expert": "Our Expertise",
+        "service": "Our Service"
+      },
+
       "willdo": {
         "waitingForyou": "Waiting for you",
         "Ui": "Innovative and Engaging Design",
@@ -77,146 +86,7 @@
         "emailMarketingTitle": "Sending targeted emails to nurture leads and communicate with customers, enhancing engagement and retention."
       }
     },
-    "pricePkg": {
-      "standerd": {
-        "title": "Standard",
-        "subtitle": "Prices do not include content and image management",
-        "price": "320",
-        "cur": "$",
-        "facility": [
-          { "id": 1, "icon": "", "title": "15 page" },
-          {
-            "id": 2,
-            "icon": "",
-            "title": "Compatible with all devices"
-          },
-          { "id": 3, "icon": "", "title": "one language website" },
-          {
-            "id": 4,
-            "icon": "",
-            "title": "Domain Name For one Year "
-          },
-          {
-            "id": 5,
-            "icon": "",
-            "title": "Free hosting for one year"
-          },
-          {
-            "id": 6,
-            "icon": "",
-            "title": "Support and maintenance for six months"
-          },
-          {
-            "id": 7,
-            "icon": "",
-            "title": "Integration with social media"
-          },
-          { "id": 8, "icon": "", "title": "One official email" },
-          {
-            "id": 9,
-            "icon": "",
-            "title": "Search engine optimization"
-          }
-        ]
-      },
-      "plus": {
-        "title": "Premium",
-        "subtitle": "Prices do not include content and image management",
-        "hint": "Recommended",
 
-        "price": "1000",
-        "cur": "$",
-        "facility": [
-          { "id": 1, "icon": "", "title": "25 page" },
-          {
-            "id": 2,
-            "icon": "",
-            "title": "Compatible with all devices"
-          },
-          { "id": 3, "icon": "", "title": "One Language Support" },
-          {
-            "id": 4,
-            "icon": "",
-            "title": "Free Domain Name For One Year"
-          },
-          {
-            "id": 5,
-            "icon": "",
-            "title": "Free Hosting For One Year"
-          },
-          {
-            "id": 6,
-            "icon": "",
-            "title": "Support and maintenance for One Year "
-          },
-          {
-            "id": 7,
-            "icon": "",
-            "title": "Integration with social media"
-          },
-          { "id": 8, "icon": "", "title": "Five official emails" },
-          {
-            "id": 9,
-            "icon": "",
-            "title": "Search engine optimization"
-          },
-          {
-            "id": 10,
-            "icon": "",
-            "title": "Contact, services and about us pages"
-          }
-        ]
-      },
-      "advance": {
-        "title": "Custom",
-        "subtitle": "Special requests determine final price.",
-        "price": "Contact",
-        "facility": [
-          { "id": 1, "icon": "", "title": "More than 30 page" },
-          {
-            "id": 2,
-            "icon": "",
-            "title": "Compatible with all devices"
-          },
-          { "id": 3, "icon": "", "title": "Two language Support" },
-          {
-            "id": 4,
-            "icon": "",
-            "title": "Free Domain Name For One Year"
-          },
-          {
-            "id": 5,
-            "icon": "",
-            "title": "Free Hosting For One Year"
-          },
-          {
-            "id": 6,
-            "icon": "",
-            "title": "Support and maintenance for two years"
-          },
-          {
-            "id": 7,
-            "icon": "",
-            "title": "Integration with social media"
-          },
-          {
-            "id": 8,
-            "icon": "",
-            "title": "Unlimited official emails"
-          },
-          {
-            "id": 9,
-            "icon": "",
-            "title": "Search engine optimization"
-          },
-          {
-            "id": 10,
-            "icon": "",
-            "title": "Contact, services and about us pages"
-          }
-        ]
-      }
-    },
     "mywork": {
       "smMenuTilte": "Social Media",
       "uiUxMenuTitle": "User Interface",

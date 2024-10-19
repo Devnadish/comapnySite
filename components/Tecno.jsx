@@ -10,7 +10,7 @@ import { TeenyiconsFirebaseSolid } from "@/components/icons/FireBase";
 import { FontistoAws } from "@/components/icons/Aws";
 import { FileIconsPrisma } from "@/components/icons/Prisma";
 import Collabs from "@/components/shared/Collabs";
-import { FileIconsPowerbuilder } from "./icons/experts";
+import { FileIconsPowerbuilder } from "./icons/Experts";
 
 export function tecno(willdo) {
   return {
@@ -83,7 +83,7 @@ async function Tecno({ lang, title = "We Grantee The Following" }) {
   const data = tecno(tcno);
 
   return (
-    <Collabs title={title} icon={<FileIconsPowerbuilder />}>
+    <Collabs title={title} icon={<FileIconsPowerbuilder />} lang={lang}>
       {data?.data?.map((willdo) => {
         return (
           <InfoBox

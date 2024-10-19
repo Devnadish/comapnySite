@@ -34,7 +34,7 @@ async function MenuItems({ navigation, lang }) {
         prefetch={false}
         className={menuStly}
       >
-        Sample
+        {navigation.sample}
       </Link>
 
       {/* <Link
