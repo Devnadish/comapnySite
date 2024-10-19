@@ -17,7 +17,7 @@ export default function BuregerMenu({ navigation, lang }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className="bg-white/50 rounded-full size-12  hover:bg-white/80 flex items-center justify-center ">
+        <button className="  rounded-full size-12    flex items-center justify-center ">
           <HeroiconsSolidMenuAlt3 />
         </button>
       </SheetTrigger>
@@ -29,7 +29,8 @@ export default function BuregerMenu({ navigation, lang }) {
         <SheetHeader>
           <SheetTitle>Excited To Serve You</SheetTitle>
           <SheetDescription>
-            Make changes to your profile here. Click save when you're done.
+            Welcome! I'm here to assist you with all your needs, from answering
+            questions to providing insights. Let’s explore new ideas together!
           </SheetDescription>
         </SheetHeader>
         <MenuItems lang={lang} navigation={navigation} />

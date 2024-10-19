@@ -3,8 +3,7 @@ import { StreamlineCallCenterSupportService } from "@/components/icons/Help";
 import { FluentPersonSupport28Regular } from "@/components/icons/Techniacl";
 import Collabs from "@/components/shared/Collabs";
 import { getDictionary } from "@/lib/dictionary";
-import { FaHandshake } from "@react-icons/all-files/fa/FaHandshake";
-import { FaJenkins } from "@react-icons/all-files/fa/FaJenkins";
+import { MaterialSymbolsPartnerExchange } from "./icons/exculisve";
 
 async function WillProvide({ lang, title = "We Grantee The Following" }) {
   const {
@@ -15,7 +14,7 @@ async function WillProvide({ lang, title = "We Grantee The Following" }) {
 
   const data = willProvide(provide);
   return (
-    <Collabs title={title}>
+    <Collabs title={title} icon={<MaterialSymbolsPartnerExchange />}>
       {data?.data?.map((willdo) => {
         return (
           <InfoBox

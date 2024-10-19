@@ -8,9 +8,9 @@ async function MenuItems({ navigation, lang }) {
       <Link href={`/${lang}`} prefetch={false} className={menuStly}>
         {navigation.home}
       </Link>
-      <Link href={`/${lang}/price`} prefetch={false} className={menuStly}>
+      {/* <Link href={`/${lang}/price`} prefetch={false} className={menuStly}>
         {navigation.price}
-      </Link>
+      </Link> */}
 
       <Link
         href={`/${lang}/services`}
@@ -20,14 +20,14 @@ async function MenuItems({ navigation, lang }) {
       >
         {navigation.serves}
       </Link>
-      <Link
+      {/* <Link
         href={`/${lang}/dashboard`}
         as={`/${lang}/dashboard`}
         prefetch={false}
         className={menuStly}
       >
         Offer
-      </Link>
+      </Link> */}
       <Link
         href={`/${lang}/worksample`}
         as={`/${lang}/worksample`}
@@ -37,14 +37,14 @@ async function MenuItems({ navigation, lang }) {
         Sample
       </Link>
 
-      <Link
+      {/* <Link
         href={`/${lang}/blog/`}
         as={`/${lang}/blog/`}
         prefetch={false}
         className={menuStly}
       >
         {navigation.blog}
-      </Link>
+      </Link> */}
     </div>
   );
 }

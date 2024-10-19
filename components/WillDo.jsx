@@ -5,6 +5,7 @@ import { SimpleIconsNextui } from "@/components/icons/UI";
 import { EosIconsPerformance } from "@/components/icons/Performance";
 import { IconParkOutlineSeo } from "@/components/icons/Seo";
 import Collabs from "@/components/shared/Collabs";
+import { MdiApprove } from "./icons/Approval";
 
 async function WillDo({ lang, title = "We Grantee The Following" }) {
   const {
@@ -15,7 +16,7 @@ async function WillDo({ lang, title = "We Grantee The Following" }) {
 
   const data = WillDoData(willdo);
   return (
-    <Collabs title={title}>
+    <Collabs title={title} icon={<MdiApprove />}>
       {data?.data?.map((willdo) => {
         return (
           <InfoBox

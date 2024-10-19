@@ -40,7 +40,7 @@ export default function RootLayout({ children, params }) {
           <div className="fixed top-0 w-full z-10">
             <Navbar lang={params.lang} />
           </div>
-          <div className="flex-grow pt-[70px]">{children}</div>
+          <div className="flex-grow pt-[70px] mb-16">{children}</div>
           <SideMenu lang={params.lang} />
         </Providers>
       </body>

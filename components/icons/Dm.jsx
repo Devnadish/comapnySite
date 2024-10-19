@@ -1,13 +1,12 @@
 import React from "react";
 
-export function SimpleIconsDm(props) {
+export function SimpleIconsDm({ width = 64, height = 64 }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={64}
-      height={64}
+      width={width}
+      height={height}
       viewBox="0 0 24 24"
-      {...props}
     >
       <path
         fill="currentColor"

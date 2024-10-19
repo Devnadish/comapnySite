@@ -8,6 +8,7 @@ import { PhPaintBrushBold } from "@/components/icons/UiUx";
 import { MdiEmailSealOutline } from "@/components/icons/EmailMarkting";
 import { SimpleIconsDm } from "@/components/icons/Dm";
 import Collabs from "@/components/shared/Collabs";
+import { IcRoundTouchApp } from "./icons/OurService";
 
 async function Services({ lang, title = "We Grantee The Following" }) {
   const {
@@ -18,7 +19,7 @@ async function Services({ lang, title = "We Grantee The Following" }) {
   const data = service(services);
 
   return (
-    <Collabs title={title}>
+    <Collabs title={title} icon={<IcRoundTouchApp />}>
       {data?.data?.map((willdo) => {
         return (
           <InfoBox
