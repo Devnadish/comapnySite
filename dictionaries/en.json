@@ -6,11 +6,14 @@
   },
 
   "navigation": {
+    "menu": "Menu",
     "home": "Home",
     "price": "Prices",
-    "sample": "My works",
+    "sample": "Portfolio",
     "blog": "Blog",
     "serves": "service",
+    "contact": "contact",
+    "whatapp": "Whatsapp",
     "sheetTilte": "Excited To Serve You",
     "sheetDesction": " Welcome! I'm here to assist you with all your needs, from answering   questions to providing insights. Let’s explore new ideas together!"
   },

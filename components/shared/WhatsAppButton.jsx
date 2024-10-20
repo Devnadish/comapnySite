@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { FluentColorHome48 } from "../icons/HomeIcon";
 import { MingcuteSendFill } from "../icons/Contact";
 
-const WhatsAppButton = () => {
+const WhatsAppButton = ({ lang, title }) => {
   const phoneNumber = "0502699023"; // Replace with the actual phone number
   const message = "Hello, I need assistance!"; // Message to pre-fill
   const encodedMessage = encodeURIComponent(message); // URL encode the message
@@ -20,16 +20,17 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleClick}
-      className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center animate-pulse"
+      className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center animate-pulse flex-col"
     >
       <LogosWhatsappIcon />
+      <span className="text-xs">{title}</span>
     </button>
   );
 };
 
 export default WhatsAppButton;
 
-export const WorkProfile = ({ lang }) => {
+export const WorkProfile = ({ lang, title }) => {
   const router = useRouter();
   const handleClick = () => {
     router.push(`/${lang}/worksample`);
@@ -38,14 +39,15 @@ export const WorkProfile = ({ lang }) => {
   return (
     <button
       onClick={handleClick}
-      className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center "
+      className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center flex-col "
     >
       <FlatColorIconsGallery />
+      <span className="text-xs">{title}</span>
     </button>
   );
 };
 
-export const HomePage = ({ lang }) => {
+export const HomePage = ({ lang, title }) => {
   const router = useRouter();
   const handleClick = () => {
     router.push(`/${lang}/`);
@@ -54,13 +56,14 @@ export const HomePage = ({ lang }) => {
   return (
     <button
       onClick={handleClick}
-      className="  rounded-full size-12  hover:bg-white/80 flex items-center justify-center "
+      className="  rounded-full size-12  hover:bg-white/80 flex items-center justify-center flex-col "
     >
       <FluentColorHome48 />
+      <span className="text-xs">{title}</span>
     </button>
   );
 };
-export const ContactUs = ({ lang }) => {
+export const ContactUs = ({ lang, title }) => {
   const router = useRouter();
   const handleClick = () => {
     router.push(`/${lang}/`);
@@ -69,9 +72,10 @@ export const ContactUs = ({ lang }) => {
   return (
     <button
       onClick={handleClick}
-      className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center "
+      className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center flex-col "
     >
       <MingcuteSendFill />
+      <span className="text-xs">{title}</span>
     </button>
   );
 };
