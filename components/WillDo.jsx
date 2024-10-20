@@ -16,7 +16,7 @@ async function WillDo({ lang, title = "We Grantee The Following" }) {
 
   const data = WillDoData(willdo);
   return (
-    <Collabs title={title} icon={<MdiApprove />} lang={lang}>
+    <Collabs title={title} icon={<MdiApprove />} lang={lang} isOpen={true}>
       {data?.data?.map((willdo) => {
         return (
           <InfoBox

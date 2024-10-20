@@ -5,20 +5,31 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-export default function Collabs({ title, children, icon, lang }) {
+export default function Collabs({
+  title,
+  children,
+  icon,
+  lang,
+  isOpen = false, // New prop to control open/close state
+}) {
   console.log(lang);
 
   // Define font classes based on the language
-  const fontClass = lang === "ar" ? "font-lateef" : "font-luckiest";
+  const fontClass = lang === "ar" ? "font-zain" : "font-luckiest";
 
   return (
-    <Accordion type="single" className="w-full" collapsible>
+    <Accordion
+      type="single"
+      className="w-full"
+      collapsible
+      defaultValue={isOpen ? "item-1" : undefined}
+    >
       <AccordionItem
         value="item-1"
         className="w-full items-center justify-between border-0"
       >
         <AccordionTrigger
-          className={`text-3xl text-white/90 mb-4 ${fontClass}   w-full bg-background/20 rounded-lg p-4 flex flex-row items-center`}
+          className={`text-3xl text-white/90 mb-4 ${fontClass} w-full bg-background/20 rounded-lg p-4 flex flex-row items-center`}
         >
           {icon}
           {title}

@@ -14,7 +14,7 @@ export default function LanguageSwitcher() {
     return segments.join("/");
   };
   return (
-    <div className="flex items-center gap-4 w-full justify-center items-center">
+    <div className="flex items-center gap-4 w-full justify-center ">
       <Button
         onClick={() => {
           router.push(redirectedPathName("ar"));

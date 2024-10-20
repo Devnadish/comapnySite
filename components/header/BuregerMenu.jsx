@@ -15,7 +15,7 @@ export default function BuregerMenu({ navigation, lang }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className="  rounded-full size-12    flex items-center justify-center ">
+        <button className="  rounded-full size-10    flex items-center justify-center ">
           <HeroiconsSolidMenuAlt3 />
         </button>
       </SheetTrigger>
