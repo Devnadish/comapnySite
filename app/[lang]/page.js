@@ -14,7 +14,6 @@ async function page({ params: { lang } }) {
       about: { homePage },
     },
   } = await getDictionary(lang);
-  console.log(homePage);
   return (
     <div
       className={`flex w-full items-center flex-col justify-center   gap-4   px-4 py-6 ${gradint1}  `}

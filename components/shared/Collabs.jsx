@@ -12,10 +12,8 @@ export default function Collabs({
   lang,
   isOpen = false, // New prop to control open/close state
 }) {
-  console.log(lang);
-
   // Define font classes based on the language
-  const fontClass = lang === "ar" ? "font-zain" : "font-luckiest";
+  const fontClass = lang === "ar" ? "font-lateef" : "font-luckiest";
 
   return (
     <Accordion

@@ -82,7 +82,6 @@ module.exports = {
         cario: ["var(--font-cairo)"],
         outFit: ["var(--font-outfit)"],
         luckiest: ["var(--font-luckiest_Guy)"],
-        zain: ["var(--font-zain)"],
       },
     },
   },
