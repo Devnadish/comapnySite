@@ -3,6 +3,7 @@ import Navbar from "@/components/header/Navbar";
 import dynamic from "next/dynamic";
 import { lateef, cairo, tajawal, luckiest_Guy } from "@/lib/fonts";
 import SideMenu from "@/components/SideMenu";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const Providers = dynamic(() => import("@/Providers/Provider"));
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children, params }) {
       style={{ colorScheme: "dark" }}
       className="dark"
     >
+      <head></head>
       <body
         className={`${cairo.variable} ${lateef.variable} ${luckiest_Guy.variable} ${tajawal.variable} flex flex-col min-h-screen mt-[70px] m-auto w-full items-center justify-center gap-4 text-white`}
         style={{
@@ -44,6 +46,7 @@ export default function RootLayout({ children, params }) {
           <div className="flex-grow pt-[70px] mb-16">{children}</div>
           <SideMenu lang={params.lang} />
         </Providers>
+        <GoogleAnalytics gaId="G-S2L434E36T" />
       </body>
     </html>
   );
