@@ -2,7 +2,6 @@ import InfoBox from "@/components/InfoBox";
 import { getDictionary } from "@/lib/dictionary";
 
 import { Nextjs } from "@/components/icons/Nextjs";
-import { NodeJs } from "@/components/icons/NodeJs";
 import { FlowbiteReactSolid } from "@/components/icons/React";
 import { TablerBrandReactNative } from "@/components/icons/ReactNative";
 import { LineiconsMongodb } from "@/components/icons/MongoDb";
@@ -11,6 +10,7 @@ import { FontistoAws } from "@/components/icons/Aws";
 import { FileIconsPrisma } from "@/components/icons/Prisma";
 import Collabs from "@/components/shared/Collabs";
 import { FileIconsPowerbuilder } from "./icons/Experts";
+import { NodeJsIcon } from "@/components/icons/NodeJsIcon";
 
 export function tecno(willdo) {
   return {
@@ -20,14 +20,14 @@ export function tecno(willdo) {
         title: willdo.nextjs,
         subtitlex: willdo.nextjsTitle,
         alt: willdo.Ui,
-        icon: <Nextjs size={50} />,
+        icon: <Nextjs />,
       },
       {
         id: "nodejs",
         title: willdo.nodejs,
         subtitlex: willdo.nodejsTitle,
         alt: willdo.Ux,
-        icon: <NodeJs size={50} />,
+        icon: <NodeJsIcon />,
       },
       {
         id: "react",
