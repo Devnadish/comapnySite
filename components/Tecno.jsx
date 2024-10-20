@@ -10,7 +10,7 @@ import { FontistoAws } from "@/components/icons/Aws";
 import { FileIconsPrisma } from "@/components/icons/Prisma";
 import Collabs from "@/components/shared/Collabs";
 import { FileIconsPowerbuilder } from "@/components/icons/Experts";
-import { NodeJsIcon } from "@/components/icons/NodeJsIcon";
+// import { NodeJsIcon } from "@/components/icons/NodeJsIcon";
 
 export function tecno(willdo) {
   return {
@@ -27,7 +27,7 @@ export function tecno(willdo) {
         title: willdo.nodejs,
         subtitlex: willdo.nodejsTitle,
         alt: willdo.Ux,
-        icon: <NodeJsIcon />,
+        icon: <Nextjs />,
       },
       {
         id: "react",
