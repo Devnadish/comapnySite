@@ -39,21 +39,25 @@ export default function CarouselImage({
       <Carousel
         setApi={setApi}
         opts={{ loop: true }}
-        plugins={autoPlay ? [Autoplay({ delay: 3000 })] : []}
+        plugins={autoPlay ? [Autoplay({ delay: 5000 })] : []}
+        className="w-full bg-transparent"
       >
-        <CarouselContent className="w-full" style={{ height: `${height}px` }}>
+        <CarouselContent
+          className="w-full bg-white/10"
+          style={{ height: `${height}px` }}
+        >
           {images.map((image, index) => (
             <CarouselItem
               key={index}
-              className="flex items-center justify-center max-w-sm sm:max-w-lg p-2 "
+              className="flex items-center bg-transparent  justify-center max-w-sm sm:max-w-lg "
               style={{ height: `${height}px` }} // Set height for CarouselItem
             >
               <Image
                 src={image}
                 width={550}
-                height={height} // Use the height prop here
+                height={550} // Use the height prop here
                 alt="image"
-                className="h-full object-cover rounded-lg"
+                // className="h-auto w-auto object-cover rounded-lg"
               />
             </CarouselItem>
           ))}

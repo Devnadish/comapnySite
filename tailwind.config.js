@@ -10,6 +10,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        orangeColor: "#FF5E00",
+        yellowColor: "#FFD700",
+        greenColor: "#40E0D0",
+        blueColor: "#000080",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -79,9 +83,12 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        cario: ["var(--font-cairo)"],
-        outFit: ["var(--font-outfit)"],
-        luckiest: ["var(--font-luckiest_Guy)"],
+        lateef: ["--var(font-lateef)"],
+      },
+      backgroundImage: {
+        bannerImg: "url('/bg1.png')",
+        blackOverlay:
+          "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(10,10,0,0.8) 100%)",
       },
     },
   },

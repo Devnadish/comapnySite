@@ -12,10 +12,10 @@ export default async function SideMenu({ lang }) {
   return (
     <div className="fixed left-0 bottom-3 w-full h-[60px] flex items-center justify-center ">
       <div className="w-[80%] h-[60px] bg-black/80 rounded-full flex flex-row justify-evenly items-center">
-        <BuregerMenu navigation={navigation} lang={lang} />
-        <WorkProfile lang={lang} title={navigation.sample} />
-        <HomePage lang={lang} />
+        {/* <BuregerMenu navigation={navigation} lang={lang} /> */}
+        {/* <WorkProfile lang={lang} title={navigation.sample} /> */}
         <WhatsAppButton title={navigation.whatapp} />
+        <HomePage lang={lang} />
         <ContactUs lang={lang} title={navigation.contact} />
       </div>
     </div>

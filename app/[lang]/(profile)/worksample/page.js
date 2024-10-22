@@ -17,6 +17,9 @@ import { TablerChartInfographic } from "@/components/icons/InfoGraph";
 import { IcSharpRestaurantMenu } from "@/components/icons/FoodMenu";
 import { HugeiconsPackage } from "@/components/icons/Package";
 import { GameIconsTargetPoster } from "@/components/icons/Poster";
+export const metadata = {
+  title: "Our Work",
+};
 
 async function page({ params: { lang } }) {
   const {

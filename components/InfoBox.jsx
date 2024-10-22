@@ -1,13 +1,24 @@
 import React from "react";
 
-const InfoBox = ({ titlex, subtitlex, icon }) => {
+const InfoBox = ({
+  titlex,
+  subtitlex,
+  icon,
+  bgColor,
+  borderColor,
+  fontColor,
+}) => {
   return (
-    <div className="flex w-full min-w-[350px] min-h-[250px] flex-col items-center justify-center gap-4 rounded-lg border border-white/20 bg-card p-2 hover:border-white/40 ">
+    <div
+      className={`flex w-full p-4 min-h-[50px] flex-row items-start justify-center gap-4 rounded-lg border ${borderColor} ${bgColor} hover:border-white/40`}
+    >
       {icon}
-      <p className="font-tajawal font-semibold text-lg"> {titlex} </p>
-      <p className="font-tajawal line-clamp-4 p-4 text-blue-300 hover:line-clamp-none">
-        {subtitlex}
-      </p>
+      <div className="flex flex-col gap-2 w-full">
+        <p className={`font-lateef font-semibold text-xl ${fontColor}`}>
+          {titlex}
+        </p>
+        <p className={`font-lateef text-lg ${fontColor}`}>{subtitlex}</p>
+      </div>
     </div>
   );
 };

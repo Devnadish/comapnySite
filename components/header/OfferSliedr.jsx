@@ -4,11 +4,11 @@ import CarouselImage from "../shared/CarouselImage";
 
 export default function OfferSliedr() {
   return (
-    <div className="rounded-sm w-[80%] h-[100px] flex items-center justify-center bg-card border border-white/20 p-2 px-4 capitalize  text-foreground ">
+    <div className="rounded-lg w-full h-[400px] flex items-center justify-center     overflow-hidden bg-transparent  capitalize  text-foreground ">
       <CarouselImage
         images={images}
         autoPlay
-        height={100}
+        height={400}
         navigateArrows={false}
       />
     </div>

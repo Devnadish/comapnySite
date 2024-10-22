@@ -16,7 +16,12 @@ async function WillDo({ lang, title = "We Grantee The Following" }) {
 
   const data = WillDoData(willdo);
   return (
-    <Collabs title={title} icon={<MdiApprove />} lang={lang} isOpen={true}>
+    // <Collabs title={title} icon={<MdiApprove />} lang={lang} isOpen={true}>
+    <div className="rounded-lg w-full lg:w-[500px]  bg-orangeColor bg-opacity-50 p-4 flex-col gap-4 flex items-center justify-center    text-foreground ">
+      <div className="flex flex-row gap-2 w-full items-center ">
+        <MdiApprove width={50} height={50} />
+        <p className="text-2xl font-tajawal font-semibold">{title}</p>
+      </div>
       {data?.data?.map((willdo) => {
         return (
           <InfoBox
@@ -25,10 +30,14 @@ async function WillDo({ lang, title = "We Grantee The Following" }) {
             titlex={willdo.title}
             subtitlex={willdo.subtitlex}
             alt={willdo.alt}
+            bgColor="bg-orangeColor/40"
+            borderColor="border-orangeColor"
+            fontColor="text-white"
           />
         );
       })}
-    </Collabs>
+    </div>
+    // </Collabs>
   );
 }
 export default WillDo;

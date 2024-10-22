@@ -19,7 +19,11 @@ async function Services({ lang, title = "We Grantee The Following" }) {
   const data = service(services);
 
   return (
-    <Collabs title={title} icon={<IcRoundTouchApp />} lang={lang}>
+    <div className="rounded-lg w-full lg:w-[500px]  bg-greenColor bg-opacity-70  p-4 flex-col gap-4 flex items-center justify-star    text-foreground ">
+      <div className="flex flex-row gap-2 w-full items-center ">
+        <IcRoundTouchApp width={50} height={50} />
+        <p className="text-2xl font-tajawal font-semibold">{title}</p>
+      </div>{" "}
       {data?.data?.map((willdo) => {
         return (
           <InfoBox
@@ -28,10 +32,13 @@ async function Services({ lang, title = "We Grantee The Following" }) {
             titlex={willdo.title}
             subtitlex={willdo.subtitlex}
             alt={willdo.alt}
+            bgColor="bg-greenColor/40"
+            borderColor="border-greenColor"
+            fontColor="text-black"
           />
         );
       })}
-    </Collabs>
+    </div>
   );
 }
 export default Services;

@@ -10,6 +10,10 @@ export function middleware(request) {
     pathname.startsWith(`/${locale}`)
   );
 
+  // Exclude /sitemap path from redirection
+  if (pathname === "/sitemap") {
+    return null; // Allow access to the sitemap
+  }
   // If the pathname does not have a locale, redirect to '/ar'
   if (!hasLocale) {
     return NextResponse.redirect(new URL("/ar", request.url));
