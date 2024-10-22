@@ -15,7 +15,7 @@ export default function HeroSection() {
         // className="h-auto w-auto object-cover"
         priority
       />
-      <p className="text-orangeColor font-lateef font-extrabold  text-5xl">
+      <p className="text-orangeColor font-lateef font-extrabold text-2xl lg:text-5xl">
         Dream To App
       </p>
     </div>

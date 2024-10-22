@@ -21,7 +21,6 @@ const Header = ({ lang, navigation }) => {
     <div className="flex items-center   w-full  h-[70px] justify-between px-4 rounded-lg">
       <BuregerMenu navigation={navigation} lang={lang} />
       <div className="flex items-center flex-row gap-2">
-        <p className="font-tajawal font-semibold text-3xl">Dream To App</p>
         <Logo />
       </div>
     </div>
