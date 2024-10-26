@@ -25,7 +25,7 @@ async function page({ params: { lang } }) {
   return (
     <>
       <HeroSection />
-      <div className="flex items-center justify-center w-full mt-10 border ">
+      {/* <div className="flex items-center justify-center w-full mt-10 border ">
         <p>Test Busckt s3</p>
         <Image
           src={tstImage1}
@@ -34,7 +34,7 @@ async function page({ params: { lang } }) {
           className="object-cover p-4 rounded-lg border-2 border-red-500"
           alt="test"
         />
-      </div>
+      </div> */}
       <div className="flex items-center justify-center w-full mt-10 border ">
         <p>Test Busckt s3 optmized</p>
         <Image
