@@ -31,7 +31,7 @@ export default function RootLayout({ children, params }) {
       className="dark"
     >
       <body
-        className={`${lateef.variable} ${cairo.variable}  flex flex-col w-full text-white`}
+        className={`${lateef.variable} ${cairo.variable} flex flex-col w-full text-white`}
       >
         <Providers
           attribute="class"
@@ -39,13 +39,11 @@ export default function RootLayout({ children, params }) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className=" w-full z-10 relative">
+          <div className="w-full z-10 relative">
             <Navbar lang={params.lang} />
-            {/* <div
-              className={`absolute top-0 left-0 h-full background   flex flex-col w-full text-white -z-1`}
-            /> */}
           </div>
-          <div className="mb-28 relative">{children}</div>
+          {/* Main content area */}
+          <main className="mb-28 relative">{children}</main>
           <Toaster />
           <SideMenu lang={params.lang} />
         </Providers>
