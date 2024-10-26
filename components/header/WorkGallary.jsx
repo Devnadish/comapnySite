@@ -36,7 +36,7 @@ export default function WorkGallary() {
       ) : (
         <CarouselImage
           images={images}
-          autoPlay
+          autoPlay={false}
           height={400}
           navigateArrows={true}
           continerHeight={400}

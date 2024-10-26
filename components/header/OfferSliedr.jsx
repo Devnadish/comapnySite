@@ -34,7 +34,7 @@ export default function OfferSlider() {
         ) : (
           <CarouselImage
             images={images}
-            autoPlay
+            autoPlay={false}
             height={400}
             navigateArrows={false}
             continerHeight={400}
