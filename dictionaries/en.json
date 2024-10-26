@@ -106,6 +106,22 @@
       "package": "Package",
       "poster": "Poster",
       "pagetitle": "At Dream to App, we specialize in delivering exceptional web and mobile solutions tailored to your unique needs. Our skilled team combines cutting-edge technology with innovative design and visual identity to create user-friendly applications that enhance both functionality and user experience. We prioritize UI/UX principles to ensure every interaction is intuitive and engaging. With a strong commitment to quality and professionalism, we execute each project with efficiency and attention to detail. Partner with Dream to App to experience the difference that true expertise can make in your digital journey."
+    },
+    "contactus": {
+      "pagetitle": "Contact Us",
+
+      "mobile": "Mobile Number",
+      "mobilePlaceHolder": "Please enter your 10-digit mobile number.",
+      "mobileValidationError": "Mobile number must be 10 digits",
+
+      "email": "Email",
+      "emailPlaceHolder": "example@example.com",
+      "emailValidationError": "you@example.com",
+
+      "msg": "Message",
+      "msgplaceHolder": "How can we help you?",
+      "msgValidationError": "Message must be at least 10 characters long",
+      "sendBtn": "send Message"
     }
   }
 }

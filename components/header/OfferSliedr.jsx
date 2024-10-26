@@ -4,6 +4,8 @@ import CarouselImage from "../shared/CarouselImage";
 import { getImages } from "../actions/getImages";
 
 const thumbnailBaseUrl = `${process.env.NEXT_PUBLIC_AWS_THUMBNAIL_ENDPOINT}`;
+// const tstImage1 = `${baseUrl}/cnc/1.jpg`;
+// const tstImage2 = `${thumbnailBaseUrl}/cnc/2.jpg`;
 
 export default function OfferSlider() {
   const [images, setImages] = useState([]);
@@ -13,9 +15,11 @@ export default function OfferSlider() {
     const fetchImages = async () => {
       try {
         const AWSimages = await getImages("offers/");
-        const baseUrl = `https://${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_BUCKET_REGION}.amazonaws.com/`;
+        console.log(AWSimages);
+        const baseUrl = `https://${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_BUCKET_REGION}.amazonaws.com`;
         const thumbnailBaseUrl = `${process.env.NEXT_PUBLIC_AWS_THUMBNAIL_ENDPOINT}`;
-        const imageUrls = AWSimages.map((image) => `${baseUrl}${image.Key}`); // Extracting keys and forming URLs
+        const imageUrls = AWSimages.map((image) => `${baseUrl}/${image.Key}`); // Extracting keys and forming URLs
+        console.log(imageUrls);
         setImages(imageUrls);
       } catch (error) {
         console.error("Error fetching images:", error);

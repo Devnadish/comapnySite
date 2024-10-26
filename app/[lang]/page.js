@@ -18,9 +18,9 @@ async function page({ params: { lang } }) {
       about: { homePage },
     },
   } = await getDictionary(lang);
-  const baseUrl = `https://${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_BUCKET_REGION}.amazonaws.com/`;
+  const baseUrl = `https://${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_BUCKET_REGION}.amazonaws.com`;
   const thumbnailBaseUrl = `${process.env.NEXT_PUBLIC_AWS_THUMBNAIL_ENDPOINT}`;
-  const tstImage1 = `${thumbnailBaseUrl}/cnc/1.jpg`;
+  const tstImage1 = `${baseUrl}/cnc/1.jpg`;
   const tstImage2 = `${thumbnailBaseUrl}/cnc/2.jpg`;
   return (
     <>

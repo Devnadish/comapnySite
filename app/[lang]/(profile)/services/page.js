@@ -35,11 +35,11 @@ async function page({ params: { lang } }) {
   } = await getDictionary(lang);
   const data = service(services);
   return (
-    <>
+    <div className="flex w-full items-center flex-col justify-center   gap-4   px-4 py-6  mt-[70px]  ">
+      <Ask />
       <div
-        className={`relative flex w-full items-center flex-row flex-wrap justify-center   gap-4   px-4 py-6  mt-[70px]  `}
+        className={`relative flex w-full items-center flex-row flex-wrap justify-center   gap-4   px-4 py-6    `}
       >
-        <Ask />
         {data?.data?.map((willdo) => {
           return (
             <InfoBox
@@ -53,7 +53,7 @@ async function page({ params: { lang } }) {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
 
