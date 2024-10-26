@@ -76,7 +76,7 @@ export const ContactUs = ({ lang, title }) => {
     <button
       onClick={handleClick}
       className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center flex-col "
-      aria-label="constact us"
+      aria-label={title}
     >
       <MingcuteSendFill />
       <span className="text-xs">{title}</span>
