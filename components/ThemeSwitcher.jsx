@@ -21,6 +21,7 @@ const ThemeSwitcher = () => {
         variant="ghost"
         className="flex items-center "
         onClick={() => setTheme("light")}
+        aria-label="Theme toggle"
       >
         <Sun className="mr-2 h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all  " />
       </Button>
@@ -28,6 +29,7 @@ const ThemeSwitcher = () => {
         variant="ghost"
         className="flex items-center gap-4"
         onClick={() => setTheme("dark")}
+        aria-label="Theme toggle"
       >
         <Moon className="mr-2 h-[1.2rem] w-[1.2rem] rotate-90 scale-100 transition-all dark:rotate-0 " />
       </Button>

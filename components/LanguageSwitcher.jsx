@@ -22,6 +22,7 @@ export default function LanguageSwitcher() {
         }}
         variant="ghost"
         className="flex items-center gap-4"
+        aria-label="language selected"
       >
         <Image
           src={"/assets/locales/saudi-arabia.png"}
@@ -36,6 +37,7 @@ export default function LanguageSwitcher() {
         }}
         className="flex items-center gap-4"
         variant="ghost"
+        aria-label="language selected"
       >
         <Image
           src={"/assets/locales/united-states.png"}

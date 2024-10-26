@@ -21,6 +21,7 @@ const WhatsAppButton = ({ lang, title }) => {
     <button
       onClick={handleClick}
       className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center animate-pulse flex-col"
+      aria-label="WhatsApp"
     >
       <LogosWhatsappIcon />
       <span className="text-xs">{title}</span>
@@ -40,6 +41,7 @@ export const WorkProfile = ({ lang, title }) => {
     <button
       onClick={handleClick}
       className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center flex-col "
+      aria-label="gallary"
     >
       <FlatColorIconsGallery />
       <span className="text-xs">{title}</span>
@@ -57,6 +59,7 @@ export const HomePage = ({ lang, title }) => {
     <button
       onClick={handleClick}
       className="  rounded-full size-12  hover:bg-white/80 flex items-center justify-center flex-col "
+      aria-label="home"
     >
       <FluentColorHome48 />
       <span className="text-xs">{title}</span>
@@ -73,6 +76,7 @@ export const ContactUs = ({ lang, title }) => {
     <button
       onClick={handleClick}
       className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center flex-col "
+      aria-label="constact us"
     >
       <MingcuteSendFill />
       <span className="text-xs">{title}</span>
