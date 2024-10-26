@@ -1,3 +1,5 @@
+"use client";
+import React, { useEffect, useState } from "react";
 import CarouselImage from "../shared/CarouselImage";
 import { getImages } from "../actions/getImages";
 import Image from "next/image";
@@ -8,25 +10,29 @@ const thumbnailBaseUrl = `${process.env.NEXT_PUBLIC_AWS_THUMBNAIL_ENDPOINT}`;
 // const tstImage1 = `${baseUrl}/cnc/1.jpg`;
 // const tstImage2 = `${thumbnailBaseUrl}/cnc/2.jpg`;
 
-export default function OfferSlider({ images }) {
-  // useEffect(() => {
-  //   const fetchImages = async () => {
-  //     try {
-  //       const AWSimages = await getImages("offers/");
-  //       const awsUrl =
-  //         "https://dreamtoapp-worksample.s3.eu-north-1.amazonaws.com/";
-  //       // const baseUrl = `https://${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_BUCKET_REGION}.amazonaws.com`;
-  //       const thumbnailBaseUrl = `${process.env.NEXT_PUBLIC_AWS_THUMBNAIL_ENDPOINT}`;
-  //       const imageUrls = AWSimages.map((image) => `${awsUrl}${image.Key}`); // Extracting keys and forming URLs
-  //       console.log({ imageUrls });
-  //     } catch (error) {
-  //       console.error("Error fetching images:", error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchImages();
-  // }, []);
+export default function OfferSlider() {
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const AWSimages = await getImages("offers/");
+        const awsUrl =
+          "https://dreamtoapp-worksample.s3.eu-north-1.amazonaws.com/";
+        // const baseUrl = `https://${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_BUCKET_REGION}.amazonaws.com`;
+        const thumbnailBaseUrl = `${process.env.NEXT_PUBLIC_AWS_THUMBNAIL_ENDPOINT}`;
+        const imageUrls = AWSimages.map((image) => `${awsUrl}${image.Key}`); // Extracting keys and forming URLs
+        console.log({ imageUrls });
+        setImages(imageUrls);
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchImages();
+  }, []);
 
   return (
     <ScrolImage1 images={images} />

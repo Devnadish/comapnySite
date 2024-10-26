@@ -11,6 +11,7 @@ import MyDrawer from "@/components/shared/Draw";
 import Footer from "@/components/Footer";
 import WorkGallary from "@/components/header/WorkGallary";
 import Image from "next/image";
+import { getImages } from "@/components/actions/getImages";
 
 async function page({ params: { lang } }) {
   const {
@@ -18,36 +19,16 @@ async function page({ params: { lang } }) {
       about: { homePage },
     },
   } = await getDictionary(lang);
-  const baseUrl = `https://${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_BUCKET_REGION}.amazonaws.com`;
-  const thumbnailBaseUrl = `${process.env.NEXT_PUBLIC_AWS_THUMBNAIL_ENDPOINT}`;
-  const tstImage1 = `${baseUrl}/cnc/1.jpg`;
-  const tstImage2 = `${thumbnailBaseUrl}/cnc/2.jpg`;
+  const awsUrl = "https://dreamtoapp-worksample.s3.eu-north-1.amazonaws.com/";
+  const AWSimages = await getImages("offers/");
+  const imageUrls = AWSimages.map((image) => `${awsUrl}${image.Key}`); // Extracting keys and forming URLs
+
   return (
     <>
       <HeroSection />
-      {/* <div className="flex items-center justify-center w-full mt-10 border ">
-        <p>Test Busckt s3</p>
-        <Image
-          src={tstImage1}
-          width={200}
-          height={200}
-          className="object-cover p-4 rounded-lg border-2 border-red-500"
-          alt="test"
-        />
-      </div> */}
-      <div className="flex items-center justify-center w-full mt-10 border ">
-        <p>Test Busckt s3 optmized</p>
-        <Image
-          src={tstImage2}
-          width={200}
-          height={200}
-          className="object-cover p-4 rounded-lg border-2 border-red-500"
-          alt="test"
-        />
-      </div>
 
       <div className="flex w-full items-center flex-col justify-center    gap-4   px-4 py-6">
-        <OfferSliedr />
+        <OfferSliedr images={imageUrls} />
         <div className=" w-full flex flex-row items-start justify-center flex-wrap gap-4">
           <Services lang={lang} title={homePage.service} />
           <Tecno lang={lang} title={homePage.expert} />
@@ -62,3 +43,32 @@ async function page({ params: { lang } }) {
 }
 
 export default page;
+
+// const baseUrl = `https://${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_BUCKET_REGION}.amazonaws.com`;
+// const thumbnailBaseUrl = `${process.env.NEXT_PUBLIC_AWS_THUMBNAIL_ENDPOINT}`;
+// const tstImage1 = `${baseUrl}/cnc/1.jpg`;
+// const tstImage2 = `${thumbnailBaseUrl}/cnc/2.jpg`;
+//  {
+//    /* <div className="flex items-center justify-center w-full mt-10 border ">
+//         <p>Test Busckt s3</p>
+//         <Image
+//           src={tstImage1}
+//           width={200}
+//           height={200}
+//           className="object-cover p-4 rounded-lg border-2 border-red-500"
+//           alt="test"
+//         />
+//       </div> */
+//  }
+{
+  /* <div className="flex items-center justify-center w-full mt-10 border ">
+  <p>Test Busckt s3 optmized</p>
+  <Image
+    src={tstImage2}
+    width={200}
+    height={200}
+    className="object-cover p-4 rounded-lg border-2 border-red-500"
+    alt="test"
+  />
+</div>; */
+}
