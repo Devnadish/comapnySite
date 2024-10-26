@@ -65,6 +65,7 @@ export default function CarouselImage({
                   placeholder="blur"
                 />
               </div>
+              <p>{image}</p>
             </CarouselItem>
           ))}
         </CarouselContent>
