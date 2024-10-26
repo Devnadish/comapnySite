@@ -60,15 +60,15 @@ export default page;
 //         />
 //       </div> */
 //  }
-{
-  /* <div className="flex items-center justify-center w-full mt-10 border ">
-  <p>Test Busckt s3 optmized</p>
-  <Image
-    src={tstImage2}
-    width={200}
-    height={200}
-    className="object-cover p-4 rounded-lg border-2 border-red-500"
-    alt="test"
-  />
-</div>; */
-}
+// {
+//   /* <div className="flex items-center justify-center w-full mt-10 border ">
+//   <p>Test Busckt s3 optmized</p>
+//   <Image
+//     src={tstImage2}
+//     width={200}
+//     height={200}
+//     className="object-cover p-4 rounded-lg border-2 border-red-500"
+//     alt="test"
+//   />
+// </div>; */
+// }
