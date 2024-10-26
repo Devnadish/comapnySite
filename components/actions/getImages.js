@@ -3,16 +3,16 @@ import { S3Client, ListObjectsV2Command } from "@aws-sdk/client-s3";
 
 // Create an S3 client
 const s3Client = new S3Client({
-  region: process.env.AWS_BUCKET_REGION,
+  region: process.env.GALLARY_BUCKET_REGION,
   credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY,
-    secretAccessKey: process.env.AWS_SECRET_KEY,
+    accessKeyId: process.env.S3AWS_ACCESS_KEY,
+    secretAccessKey: process.env.S3AWS_SECRET_KEY,
   },
 });
 
 export async function getImages(Prefix) {
   const params = {
-    Bucket: process.env.AWS_BUCKET_NAME,
+    Bucket: process.env.GALLARY_BUCKET_NAME,
     Prefix: Prefix,
     edits: {
       resize: {

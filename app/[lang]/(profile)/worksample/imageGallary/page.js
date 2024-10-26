@@ -11,9 +11,9 @@ const Page = async ({ searchParams }) => {
   const prfx = prefix ? `${prefix}/` : ""; // Ensure prefix is defined
   const images = await getImages(prfx);
 
-  const baseUrl = `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_BUCKET_REGION}.amazonaws.com/`;
+  const baseUrl = `https://${process.env.GALLARY_BUCKET_NAME}.s3.${process.env.GALLARY_BUCKET_REGION}.amazonaws.com/`;
 
-  const thumbnailBaseUrl = `${process.env.AWS_THUMBNAIL_ENDPOINT}/300x300/`;
+  const thumbnailBaseUrl = `${process.env.GALLARY_THUMBNAIL_ENDPOINT}/300x300/`;
 
   const imageUrls = getImageUrls(images, baseUrl, thumbnailBaseUrl);
 
