@@ -8,13 +8,7 @@ export default function HeroSection() {
     <div
       className={`background   flex  justify-center items-center  w-full  flex-col gap-3`}
     >
-      <Image
-        src={logo}
-        alt={"Dream To App"}
-        width={200}
-        placeholder="blur"
-        priority
-      />
+      <Image src={logo} alt={"Dream To App"} width={200} priority />
       <p className="text-orangeColor font-lateef font-extrabold text-2xl lg:text-5xl">
         Dream To App <span className="text-blueColor text-sm">v01</span>
       </p>

@@ -1,17 +1,12 @@
-import HomeSkelton from '@/components/shared/skelton/HomeSkelton';
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Loading() {
-    // Or a custom loading skeleton component
-    return (
-        <>
-            <div className='flex flex-wrap items-center justify-evenly gap-4    p-4'>
-                <HomeSkelton />
-                <HomeSkelton />
-                <HomeSkelton />
-                <HomeSkelton />
-                <HomeSkelton />
-                <HomeSkelton />
-            </div>
-        </>
-    );
+  // Or a custom loading skeleton component
+  return (
+    <div className="flex w-fll flex-wrap items-center justify-center  gap-2    p-4">
+      <Skeleton className="h-[50vh] w-full bg-white/10" />
+      <Skeleton className="h-[50vh] w-full bg-white/10" />
+      <Skeleton className="h-[50vh] w-full bg-white/10" />
+    </div>
+  );
 }
