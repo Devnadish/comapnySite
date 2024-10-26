@@ -1,17 +1,13 @@
-import CarouselImage from "@/components/shared/CarouselImage";
-import { images } from "@/constant/images";
 import Services from "@/components/Services";
 import Tecno from "@/components/Tecno";
 import WillDo from "@/components/WillDo";
 import WillProvide from "@/components/WillProvide";
 import { getDictionary } from "@/lib/dictionary";
 import HeroSection from "@/components/HeroSection";
-import OfferSliedr from "@/components/header/OfferSliedr";
-import MyDrawer from "@/components/shared/Draw";
 import Footer from "@/components/Footer";
 import WorkGallary from "@/components/header/WorkGallary";
-import Image from "next/image";
 import { getImages } from "@/components/actions/getImages";
+import CarouselImage from "@/components/shared/CarouselImage";
 
 async function page({ params: { lang } }) {
   const {
@@ -20,15 +16,21 @@ async function page({ params: { lang } }) {
     },
   } = await getDictionary(lang);
   const awsUrl = "https://dreamtoapp-worksample.s3.eu-north-1.amazonaws.com/";
-  const AWSimages = await getImages("offers/");
-  const imageUrls = AWSimages.map((image) => `${awsUrl}${image.Key}`); // Extracting keys and forming URLs
+  const offerImages = await getImages("offers/");
+  const offerImagesUrl = offerImages.map((image) => `${awsUrl}${image.Key}`); // Extracting keys and forming URLs
 
   return (
     <>
       <HeroSection />
 
       <div className="flex w-full items-center flex-col justify-center    gap-4   px-4 py-6">
-        <OfferSliedr images={imageUrls} />
+        <CarouselImage
+          images={offerImagesUrl}
+          autoPlay={true}
+          height={400}
+          navigateArrows={false}
+          continerHeight={400}
+        />
         <div className=" w-full flex flex-row items-start justify-center flex-wrap gap-4">
           <Services lang={lang} title={homePage.service} />
           <Tecno lang={lang} title={homePage.expert} />
@@ -72,3 +74,7 @@ export default page;
 //   />
 // </div>; */
 // }
+
+{
+  /* <div className="animate-pulse w-full h-full bg-gray-200 rounded-lg"></div>; */
+}

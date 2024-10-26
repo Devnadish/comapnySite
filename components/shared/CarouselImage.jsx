@@ -58,14 +58,12 @@ export default function CarouselImage({
                   // height={255} // Use the height prop here
                   alt="image"
                   fill
-                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="border border-white/20 p-2 rounded-lg"
                   style={{ objectFit: "contain" }}
                   blurDataURL={blur}
                   placeholder="blur"
                 />
               </div>
-              <p>{image}</p>
             </CarouselItem>
           ))}
         </CarouselContent>

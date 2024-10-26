@@ -8,7 +8,7 @@ const thumbnailBaseUrl = `${process.env.NEXT_PUBLIC_AWS_THUMBNAIL_ENDPOINT}`;
 // const tstImage1 = `${baseUrl}/cnc/1.jpg`;
 // const tstImage2 = `${thumbnailBaseUrl}/cnc/2.jpg`;
 
-export default function OfferSlider({ images }) {
+export default function OfferSlider1({ images }) {
   // useEffect(() => {
   //   const fetchImages = async () => {
   //     try {
