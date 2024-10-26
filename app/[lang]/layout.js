@@ -39,9 +39,9 @@ export default function RootLayout({ children, params }) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="w-full z-10 relative">
+          <nav className="w-full z-10 relative">
             <Navbar lang={params.lang} />
-          </div>
+          </nav>
           {/* Main content area */}
           <main className="mb-28 relative">{children}</main>
           <Toaster />

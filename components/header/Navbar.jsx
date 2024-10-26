@@ -5,11 +5,11 @@ import { getDictionary } from "@/lib/dictionary";
 const Navbar = async ({ lang }) => {
   const { navigation } = await getDictionary(lang);
   return (
-    <nav
+    <div
       className={`fixed top-0 flex  z-10  w-full items-center justify-between   p-4   flex-col   `}
     >
       <Header lang={lang} navigation={navigation} />
-    </nav>
+    </div>
   );
 };
 
