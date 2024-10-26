@@ -9,6 +9,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        flicker: "flicker 1s infinite alternate",
+      },
+      keyframes: {
+        flicker: {
+          "0%": { opacity: "1" },
+          "50%": { opacity: "0.8" },
+          "100%": { opacity: "1" },
+        },
+      },
       colors: {
         orangeColor: "#FF5E00",
         yellowColor: "#FFD700",
