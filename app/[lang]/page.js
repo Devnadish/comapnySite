@@ -10,6 +10,7 @@ import OfferSliedr from "@/components/header/OfferSliedr";
 import MyDrawer from "@/components/shared/Draw";
 import Footer from "@/components/Footer";
 import WorkGallary from "@/components/header/WorkGallary";
+import Image from "next/image";
 
 async function page({ params: { lang } }) {
   const {
@@ -17,9 +18,13 @@ async function page({ params: { lang } }) {
       about: { homePage },
     },
   } = await getDictionary(lang);
+  const baseUrl = `https://${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_BUCKET_REGION}.amazonaws.com/`;
+  const thumbnailBaseUrl = `${process.env.NEXT_PUBLIC_AWS_THUMBNAIL_ENDPOINT}`;
+  const tstImage = `https://${process.env.NEXT_PUBLIC_AWS_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_BUCKET_REGION}.amazonaws.com/cnc/1.jpg`;
   return (
     <>
       <HeroSection />
+      <Image src={tstImage} width={200} height={200} />
 
       <div className="flex w-full items-center flex-col justify-center    gap-4   px-4 py-6">
         <OfferSliedr />
