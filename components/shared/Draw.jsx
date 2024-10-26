@@ -33,7 +33,7 @@ function DrawTItle({ headTitle }) {
     <Drawer.Title className="mb-4 font-medium">
       <div className="mb-4 flex  flex-row justify-center items-center border-b-4 border-blueColor bg-yellowColor px-8 rounded-lg ">
         <h1 className="font-lateef  text-lg sm:text-xl text-blueColor">
-          {headTitle}{" "}
+          {headTitle}
         </h1>
       </div>
     </Drawer.Title>
@@ -43,7 +43,7 @@ function DrawTItle({ headTitle }) {
 function Triger() {
   return (
     <Drawer.Trigger asChild>
-      <Button className="border-b-2 border-orangeColor w-[200px] font-cairo text-xl bg-transparent rounded-none text-blueColor animate-bounce font-semibold">
+      <Button className="border-b-2 border-orangeColor w-[200px] font-cairo text-sm md:text-xl bg-transparent rounded-none text-blueColor animate-bounce font-semibold">
         حقق حلمك واحصل علي خصم 20%
       </Button>
     </Drawer.Trigger>

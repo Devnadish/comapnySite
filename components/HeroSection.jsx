@@ -9,7 +9,7 @@ export default function HeroSection() {
       className={`background   flex  justify-center items-center  w-full  flex-col gap-3`}
     >
       <Image src={logo} alt={"Dream To App"} width={200} priority />
-      <p className="text-orangeColor font-lateef font-extrabold text-2xl lg:text-5xl">
+      <p className="text-orangeColor font-lateef font-extrabold text-lg md:text-5xl">
         Dream To App <span className="text-blueColor text-sm">v01</span>
       </p>
 
