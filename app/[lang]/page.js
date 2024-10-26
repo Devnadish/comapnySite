@@ -25,6 +25,7 @@ async function page({ params: { lang } }) {
     <>
       <HeroSection />
       <div className="flex items-center justify-center w-full mt-10 border ">
+        <p>Test Busckt s3</p>
         <Image
           src={tstImage}
           width={200}
