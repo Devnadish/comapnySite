@@ -16,7 +16,7 @@ export default function HeroSection() {
         priority
       />
       <p className="text-orangeColor font-lateef font-extrabold text-2xl lg:text-5xl">
-        Dream To App
+        Dream To App <span className="text-blueColor text-sm">v01</span>
       </p>
 
       <MyDrawer />
