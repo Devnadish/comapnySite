@@ -24,7 +24,15 @@ async function page({ params: { lang } }) {
   return (
     <>
       <HeroSection />
-      <Image src={tstImage} width={200} height={200} />
+      <div className="flex items-center justify-center w-full mt-10 border ">
+        <Image
+          src={tstImage}
+          width={200}
+          height={200}
+          className="object-cover p-4 rounded-lg border-2 border-red-500"
+          alt="test"
+        />
+      </div>
 
       <div className="flex w-full items-center flex-col justify-center    gap-4   px-4 py-6">
         <OfferSliedr />
