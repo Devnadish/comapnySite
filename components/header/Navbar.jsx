@@ -1,5 +1,4 @@
 import Logo from "@/components/header/Logo";
-import OfferSliedr from "./OfferSliedr1";
 import BuregerMenu from "./BuregerMenu";
 import { getDictionary } from "@/lib/dictionary";
 
