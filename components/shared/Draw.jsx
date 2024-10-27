@@ -42,10 +42,8 @@ function DrawTItle({ headTitle }) {
 
 function Triger() {
   return (
-    <Drawer.Trigger asChild>
-      <Button className="border-b-2 border-orangeColor w-[200px] font-cairo text-sm md:text-xl bg-transparent rounded-none text-blueColor animate-bounce font-semibold">
-        حقق حلمك واحصل علي خصم 20%
-      </Button>
+    <Drawer.Trigger className="border-b-2 border-orangeColor w-[200px] font-cairo text-sm md:text-xl bg-transparent rounded-none text-blueColor animate-bounce font-semibold">
+      حقق حلمك واحصل علي خصم 20%
     </Drawer.Trigger>
   );
 }
