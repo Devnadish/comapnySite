@@ -9,7 +9,7 @@ import { MdiEmailSealOutline } from "@/components/icons/EmailMarkting";
 import { SimpleIconsDm } from "@/components/icons/Dm";
 import { IcRoundTouchApp } from "./icons/OurService";
 
-async function Services({ lang, title = "We Grantee The Following" }) {
+async function Services({ lang, title, more }) {
   const {
     page: {
       about: { services },
@@ -21,7 +21,7 @@ async function Services({ lang, title = "We Grantee The Following" }) {
     <div className="rounded-lg  flex-col     w-full    bg-greenColor bg-opacity-70  p-4 flex-warp gap-4 flex items-center justify-star    text-foreground ">
       <div className="flex flex-row gap-2 w-full items-center ">
         <IcRoundTouchApp width={50} height={50} />
-        <p className="text-2xl font-tajawal font-semibold">{title}</p>
+        <p className="text-2xl font-cairo font-semibold">{title}</p>
       </div>
 
       <div className="rounded-lg  flex flex-row   pb-6  w-full flex-wrap gap-4  items-center justify-center    text-foreground ">
@@ -36,6 +36,7 @@ async function Services({ lang, title = "We Grantee The Following" }) {
               bgColor="bg-greenColor/40"
               borderColor="border-greenColor"
               fontColor="text-black"
+              more={more}
             />
           );
         })}

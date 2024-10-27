@@ -1,12 +1,14 @@
 import "../../styles/globals.css";
-import Navbar from "@/components/header/Navbar";
+
 import dynamic from "next/dynamic";
 import { lateef, cairo } from "@/lib/fonts";
-import SideMenu from "@/components/SideMenu";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import { Toaster } from "@/components/ui/toaster";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
+const Navbar = dynamic(() => import("@/components/header/Navbar"));
+const SideMenu = dynamic(() => import("@/components/SideMenu"));
 const Providers = dynamic(() => import("@/Providers/Provider"));
+const Toaster = dynamic(() => import("@/components/ui/toaster").then(mod => mod.Toaster));
 
 export const metadata = {
   title: {

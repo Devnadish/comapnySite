@@ -4,22 +4,35 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "source.unsplash.com",
-      },
-      {
-        protocol: "https",
         hostname: "dreamtoapp-worksample.s3.eu-north-1.amazonaws.com",
-      },
-      {
-        protocol: "https",
-        hostname: "d1jgb0iyz7gf72.cloudfront.net",
+        port: "",
+        pathname: "/**",
       },
     ],
-    // domains: ["images.unsplash.com"], // Add any other domains you want to allow
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+          {
+            key: "X-XSS-Protection",
+            value: "1; mode=block",
+          },
+        ],
+      },
+    ];
   },
 };
 

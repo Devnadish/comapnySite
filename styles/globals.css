@@ -87,6 +87,23 @@ body {
   width: 100vw; /* Full viewport width */
 }
 
+.bg-gradient-circle {
+  background: radial-gradient(
+    circle,
+    rgba(255, 94, 0, 0.7),
+    /* Orange with higher opacity */ rgba(0, 0, 128, 0.5),
+    /* Blue with transparency */ rgba(255, 215, 0, 0.3),
+    /* Yellow with transparency */ rgba(64, 224, 208, 0.2)
+      /* Green with transparency */
+  );
+  position: absolute; /* Ensure it covers the entire section */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Ensure it is behind the content */
+}
+
 /*  orange :#FF5E00*/
 /*  blue :#000080*/
 /*  yellow :#ffd700*/

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/assets/logoFinal.webp";
+import logo from "../../public/logo.webp";
 
 const Logo = () => {
   return (

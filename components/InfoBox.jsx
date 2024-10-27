@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const InfoBox = ({
@@ -7,18 +8,27 @@ const InfoBox = ({
   bgColor,
   borderColor,
   fontColor,
+  more,
 }) => {
   return (
     <div
-      className={`flex  max-w-[350px] p-4 min-h-[150px] flex-row items-start justify-center gap-4 rounded-lg border ${borderColor} ${bgColor} hover:border-white/40`}
+      className={`flex flex-col max-w-[350px] p-4 min-h-[150px]  items-start justify-center gap-4 rounded-lg border ${borderColor} ${bgColor} hover:border-white/40`}
     >
-      {icon}
-      <div className="flex flex-col gap-2 w-full">
-        <p className={`font-lateef font-semibold text-2xl ${fontColor}`}>
+      <div className="flex flex-row gap-2 w-full items-center">
+        {icon}
+        <p className={`font-cairo font-semibold text-2xl  ${fontColor}`}>
           {titlex}
         </p>
-        <p className={`font-lateef text-xl ${fontColor}`}>{subtitlex}</p>
       </div>
+      <p className={`font-tajawal font-semibold text-xl ${fontColor}`}>
+        {subtitlex}
+      </p>
+      <Link
+        className="text-lg  capitalize self-end text-blueColor font-semibold font-tajawal hover:text-blueColor/80 underline"
+        href="#"
+      >
+        {more}
+      </Link>
     </div>
   );
 };

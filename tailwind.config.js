@@ -15,7 +15,6 @@ module.exports = {
         // Removed duplicate backgroundImage definitions
       },
       animation: {
-        flicker: "flicker 1s infinite alternate",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
@@ -89,6 +88,7 @@ module.exports = {
       fontFamily: {
         lateef: ["var(--font-lateef)"],
         cairo: ["var(--font-cairo)"],
+        tajawal: ["var(--font-tajawal)"],
       },
     },
   },

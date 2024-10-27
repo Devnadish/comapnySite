@@ -12,8 +12,9 @@ export default function MyDrawer({
 }) {
   return (
     <Drawer.Root>
-      <Triger />
-
+      <div className="relative w-full h-full">
+        <Triger />
+      </div>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 " />
         <Drawer.Content className="fixed bottom-0 left-0 right-0 mt-24 flex h-[90%] sm:h-[70%] flex-col rounded-t-[10px] bg-zinc-100 ">
@@ -42,7 +43,7 @@ function DrawTItle({ headTitle }) {
 
 function Triger() {
   return (
-    <Drawer.Trigger className="border-b-2 border-orangeColor w-[200px] font-cairo text-sm md:text-xl bg-transparent rounded-none text-blueColor animate-bounce font-semibold">
+    <Drawer.Trigger className="border-b-2 border-orangeColor w-full font-cairo text-sm md:text-xl bg-transparent rounded-none text-blueColor animate-bounce font-semibold">
       حقق حلمك واحصل علي خصم 20%
     </Drawer.Trigger>
   );
