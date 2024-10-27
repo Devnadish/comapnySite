@@ -1,27 +1,18 @@
-import Logo from "@/components/header/Logo";
-import BuregerMenu from "./BuregerMenu";
+import dynamic from "next/dynamic";
 import { getDictionary } from "@/lib/dictionary";
 
+const Logo = dynamic(() => import("@/components/header/Logo"), { ssr: false });
+const BuregerMenu = dynamic(() => import("./BuregerMenu"), { ssr: false });
+
 const Navbar = async ({ lang }) => {
-  const { navigation } = await getDictionary(lang);
+  // const { navigation } = await getDictionary(lang);
+
   return (
-    <div
-      className={`fixed top-0 flex  z-10  w-full items-center justify-between   p-4   flex-col   `}
-    >
-      <Header lang={lang} navigation={navigation} />
+    <div className="fixed top-0 flex z-50 w-full items-center justify-between p-4 flex-row">
+      <BuregerMenu lang={lang} />
+      <Logo />
     </div>
   );
 };
 
 export default Navbar;
-
-const Header = ({ lang, navigation }) => {
-  return (
-    <div className="flex items-center   w-full  h-[70px] justify-between px-4 rounded-lg">
-      <BuregerMenu navigation={navigation} lang={lang} />
-      <div className="flex items-center flex-row gap-2">
-        <Logo />
-      </div>
-    </div>
-  );
-};

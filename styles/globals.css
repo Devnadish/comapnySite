@@ -87,23 +87,6 @@ body {
   width: 100vw; /* Full viewport width */
 }
 
-.background {
-  /* Smooth radial gradient with brand colors */
-  background: radial-gradient(
-      circle,
-      rgba(255, 94, 0, 0) 0%,
-      /* Transparent Orange */ rgba(255, 215, 0, 0.4) 40%,
-      /* Yellow */ rgba(64, 224, 208, 0.6) 70%,
-      /* Green */ rgba(0, 0, 128, 0.8) 100% /* Blue */
-    ),
-    url("../public/bg.webp"); /* Correct path to the image in the public folder */
-  background-size: cover; /* Ensures the image covers the entire area */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  position: relative; /* For positioning child elements */
-  min-height: 100vh; /* Ensures the background covers the full height */
-}
-
 /*  orange :#FF5E00*/
 /*  blue :#000080*/
 /*  yellow :#ffd700*/

@@ -8,21 +8,18 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import MenuItems from "./MenuItems";
-import { HeroiconsSolidMenuAlt3 } from "../icons/MenuIcon";
 import LanguageSwitcher from "../LanguageSwitcher";
+import { getDictionary } from "@/lib/dictionary";
 
-export default function BuregerMenu({ navigation, lang }) {
+export default async function BuregerMenu({ lang }) {
+  const { navigation } = await getDictionary(lang);
   return (
     <Sheet>
-      <SheetTrigger asChild>
-        <button
-          className="  rounded-full size-10    flex items-center justify-center text-foreground flex-col"
-          aria-label="menu"
-        >
-          {/* <HeroiconsSolidMenuAlt3 />
-          <span className="text-xs">{navigation.menu}</span> */}
-          <MenuIcon />
-        </button>
+      <SheetTrigger
+        className="  rounded-full size-10    flex items-center justify-center text-foreground flex-col"
+        aria-label="menu"
+      >
+        <MenuIcon />
       </SheetTrigger>
       <SheetContent
         forceMount
