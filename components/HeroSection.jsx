@@ -42,8 +42,10 @@ export default function HeroSection() {
               v1.0
             </span>
           </p>
-          <p className="text-3xl font-cairo font-bold text-orangeColor">
-            {process.env.NODE_ENV}
+          <p className="text-3xl font-cairo font-bold text-orangeColor fixed top-0">
+            {process.env.NODE_ENV === "development"
+              ? process.env.NODE_ENV
+              : null}
           </p>
           <MyDrawer />
         </div>
