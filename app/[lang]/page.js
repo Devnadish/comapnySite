@@ -1,16 +1,16 @@
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/homePage/HeroSection";
 import Footer from "@/components/Footer";
 import { getDictionary } from "@/lib/dictionary";
 import { getImages } from "@/components/actions/getImages";
 import ProductCarousel from "@/components/shared/ProductCarousel";
 
 // Dynamically import components that are not needed for initial render
-const Services = dynamic(() => import("@/components/Services"));
-const Tecno = dynamic(() => import("@/components/Tecno"));
-const WillDo = dynamic(() => import("@/components/WillDo"));
-const WillProvide = dynamic(() => import("@/components/WillProvide"));
+const Services = dynamic(() => import("@/components/homePage/Services"));
+const Tecno = dynamic(() => import("@/components/homePage/Tecno"));
+const WillDo = dynamic(() => import("@/components/homePage/WillDo"));
+const WillProvide = dynamic(() => import("@/components/homePage/WillProvide"));
 
 const awsUrl = "https://dreamtoapp-worksample.s3.eu-north-1.amazonaws.com/";
 
@@ -22,19 +22,14 @@ export default async function Page({ params: { lang } }) {
     },
   } = await getDictionary(lang);
 
-  const [offerImages, productImages] = await Promise.all([
+  const [offerImagesUrl, productImagesUrl] = await Promise.all([
     getImages("offers/"),
     getImages("worksample/"),
   ]);
 
-  const offerImagesUrl = offerImages.map((image) => `${awsUrl}${image.Key}`);
-  const productImagesUrl = productImages.map(
-    (image) => `${awsUrl}${image.Key}`
-  );
-
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
 
       <main className="flex w-full items-center flex-col justify-center gap-4 px-4 py-6">
         {/* Offer Carousel */}
@@ -58,15 +53,15 @@ export default async function Page({ params: { lang } }) {
               more={homePage.more}
             />
           </Suspense>
-          <Suspense fallback={<div>Loading technologies...</div>}>
+          {/* <Suspense fallback={<div>Loading technologies...</div>}>
             <Tecno lang={lang} title={homePage.expert} />
-          </Suspense>
-          <Suspense fallback={<div>Loading provisions...</div>}>
+          </Suspense> */}
+          {/* <Suspense fallback={<div>Loading provisions...</div>}>
             <WillProvide lang={lang} title={homePage.foryou} />
           </Suspense>
           <Suspense fallback={<div>Loading guarantees...</div>}>
             <WillDo lang={lang} title={homePage.ensure} />
-          </Suspense>
+          </Suspense> */}
         </section>
 
         <Suspense fallback={<div>Loading samples...</div>}>

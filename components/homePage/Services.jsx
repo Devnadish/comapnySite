@@ -4,10 +4,10 @@ import { getDictionary } from "@/lib/dictionary";
 import { CarbonApplicationMobile } from "@/components/icons/MobileApp";
 import { CarbonApplicationWeb } from "@/components/icons/WebApp";
 import { MageShop } from "@/components/icons/Ecomm";
-import { PhPaintBrushBold } from "@/components/icons/UiUx";
 import { MdiEmailSealOutline } from "@/components/icons/EmailMarkting";
 import { SimpleIconsDm } from "@/components/icons/Dm";
-import { IcRoundTouchApp } from "./icons/OurService";
+import { IcRoundTouchApp } from "@/components/icons/OurService";
+import { SimpleIconsNextui } from "@/components/icons/UI";
 
 async function Services({ lang, title, more }) {
   const {
@@ -39,6 +39,7 @@ async function Services({ lang, title, more }) {
               more={more}
               lang={lang}
               tag={willdo.tag}
+              id={willdo.id}
             />
           );
         })}
@@ -51,7 +52,7 @@ export function service(willdo) {
   return {
     data: [
       {
-        id: "mobileAppTitle",
+        id: "mobileApp",
         title: willdo.mobileApp,
         subtitlex: willdo.mobileAppTitle,
         alt: willdo.mobileAppTitle,
@@ -64,7 +65,7 @@ export function service(willdo) {
         subtitlex: willdo.webAppTitle,
         alt: willdo.webAppTitle,
         icon: <CarbonApplicationWeb />,
-        tag: "webApp",
+        tag: "website",
       },
       {
         id: "ecommerce",
@@ -72,23 +73,23 @@ export function service(willdo) {
         subtitlex: willdo.ecommerceTitle,
         alt: willdo.ecommerce,
         icon: <MageShop />,
-        tag: "ecommerce",
+        tag: "ecomm",
       },
       {
-        id: "design",
+        id: "ui",
         title: willdo.design,
         subtitlex: willdo.designTitle,
         alt: willdo.designTitle,
-        icon: <PhPaintBrushBold />,
-        tag: "design",
+        icon: <SimpleIconsNextui />,
+        tag: "ui",
       },
       {
-        id: "dm",
+        id: "sm",
         title: willdo.digitalMarketing,
         subtitlex: willdo.digitalMarketingTitle,
         alt: willdo.digitalMarketingTitle,
         icon: <SimpleIconsDm />,
-        tag: "dm",
+        tag: "sm",
       },
       {
         id: "em",
@@ -96,7 +97,7 @@ export function service(willdo) {
         subtitlex: willdo.emailMarketingTitle,
         alt: willdo.digitalMarketingTitle,
         icon: <MdiEmailSealOutline />,
-        tag: "em",
+        tag: "emailmarkting",
       },
     ],
   };

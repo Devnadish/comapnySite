@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
-import { Button } from "../ui/button";
-import { LogosWhatsappIcon } from "../icons/WhatsApp";
-import { FlatColorIconsGallery } from "../icons/Gallary";
+import { LogosWhatsappIcon } from "@/components/icons/WhatsApp";
+import { FlatColorIconsGallery } from "@/components/icons/Gallary";
 import { useRouter } from "next/navigation";
-import { FluentColorHome48 } from "../icons/HomeIcon";
-import { MingcuteSendFill } from "../icons/Contact";
+import { FluentColorHome48 } from "@/components/icons/HomeIcon";
+import { MingcuteSendFill } from "@/components/icons/Contact";
 
 const WhatsAppButton = ({ lang, title }) => {
   const phoneNumber = "0502699023"; // Replace with the actual phone number

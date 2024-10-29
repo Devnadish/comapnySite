@@ -1,4 +1,4 @@
-import consoleLog from "@/lib/consoleLog";
+import { convertToSlug } from "@/lib/nadish";
 import Link from "next/link";
 import React from "react";
 
@@ -12,10 +12,10 @@ const InfoBox = ({
   more,
   lang,
   tag,
-  folder,
+  id,
 }) => {
-  console.log({ folder, tag, lang });
-
+  const title = convertToSlug(titlex);
+  console.log(title);
   return (
     <div
       className={`flex flex-col max-w-[350px] p-4 min-h-[300px]  items-start justify-center gap-4 rounded-lg border ${borderColor} ${bgColor} hover:border-white/40`}
@@ -31,7 +31,7 @@ const InfoBox = ({
       </p>
       <Link
         className="text-lg capitalize self-end text-blueColor font-semibold font-tajawal hover:text-blueColor/80 underline"
-        href={`/${lang}/showmore?tag=${tag}&title=${titlex}`} // Using query parameters
+        href={`/${lang}/showmore/${id}/?tag=${tag}&title=${title}`} // Using query parameters
         prefetch
       >
         {more}

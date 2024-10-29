@@ -10,36 +10,27 @@ const s3Client = new S3Client({
   },
 });
 
-export async function getImages(Prefix) {
+const awsUrl = "https://dreamtoapp-worksample.s3.eu-north-1.amazonaws.com/";
+
+export async function getImages(prefix) {
   const params = {
     Bucket: process.env.GALLARY_BUCKET_NAME,
-    Prefix: Prefix,
-    edits: {
-      resize: {
-        fit: "cover",
-      },
-      grayscale: true,
-    },
+    Prefix: prefix,
   };
 
   try {
     const command = new ListObjectsV2Command(params);
-    const data = await s3Client.send(command);
+    const { Contents = [] } = await s3Client.send(command);
 
-    // Check if data.Contents exists and filter out invalid images
-    if (data.Contents) {
-      return data.Contents.filter((image) => {
-        const imageKey = image.Key;
-        // Ensure the key is valid and does not end with '/'
+    // Filter out invalid image keys and return full URLs
+    const validUrls = Contents.filter(
+      ({ Key }) => Key && !Key.endsWith("/")
+    ).map(({ Key }) => `${awsUrl}${Key}`);
 
-        return imageKey && !imageKey.endsWith("/");
-      });
-    }
-
-    // Return an empty array if no valid images are found
-    return [];
+    console.log(validUrls);
+    return validUrls;
   } catch (error) {
-    console.error("Error fetching images:", error);
-    throw new Error("Error fetching images");
+    console.error("Error fetching images:", error.message);
+    throw new Error("Unable to fetch images. Please try again later.");
   }
 }

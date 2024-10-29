@@ -4,7 +4,7 @@ import { MajesticonsUxCircleLine } from "@/components/icons/Ux";
 import { SimpleIconsNextui } from "@/components/icons/UI";
 import { EosIconsPerformance } from "@/components/icons/Performance";
 import { IconParkOutlineSeo } from "@/components/icons/Seo";
-import { MdiApprove } from "./icons/Approval";
+import { MdiApprove } from "@/components/icons/Approval";
 
 async function WillDo({ lang, title = "We Grantee The Following" }) {
   const {

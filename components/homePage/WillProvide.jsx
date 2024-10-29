@@ -2,7 +2,7 @@ import InfoBox from "@/components/InfoBox";
 import { StreamlineCallCenterSupportService } from "@/components/icons/Help";
 import { FluentPersonSupport28Regular } from "@/components/icons/Techniacl";
 import { getDictionary } from "@/lib/dictionary";
-import { MaterialSymbolsPartnerExchange } from "./icons/exculisve";
+import { MaterialSymbolsPartnerExchange } from "@/components/icons/exculisve";
 
 async function WillProvide({ lang, title = "We Grantee The Following" }) {
   const {

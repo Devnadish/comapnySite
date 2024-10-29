@@ -1,7 +1,7 @@
 import Image from "next/image";
-import bg from "../public/bg.webp";
-import logo from "../public/logo.webp";
-import MyDrawer from "./shared/Draw";
+import bg from "../../public/bg.webp";
+import logo from "../../public/logo.webp";
+import MyDrawer from "../shared/Draw";
 
 export default function HeroSection() {
   return (

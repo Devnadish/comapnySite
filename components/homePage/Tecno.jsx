@@ -9,7 +9,7 @@ import { TeenyiconsFirebaseSolid } from "@/components/icons/FireBase";
 import { FontistoAws } from "@/components/icons/Aws";
 import { FileIconsPrisma } from "@/components/icons/Prisma";
 import { FileIconsPowerbuilder } from "@/components/icons/Experts";
-import { Mdi } from "./icons/Mdi";
+import { Mdi } from "@/components/icons/Mdi";
 // import { NodeJsIcon } from "@/components/icons/NodeJsIcon";
 
 export function tecno(willdo) {

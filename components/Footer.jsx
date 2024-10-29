@@ -5,7 +5,7 @@ import {
   IcRoundTiktok,
   LineMdInstagram,
   PrimeTwitter,
-} from "./icons/SocialMedai";
+} from "@/components/icons/SocialMedai";
 
 function Footer() {
   return (

@@ -48,10 +48,8 @@ export default function RootLayout({ children, params }) {
           </nav>
           {/* Main content area */}
           {/* <main className="mb-28 relative">{children}</main> */}
-          <main className="mx-auto  ">
-            <div className="flex min-h-screen flex-col items-center  ">
-              {children}
-            </div>
+          <main className="mx-auto  min-h-screen min-w-screen w-full p-8">
+            <div className="flex  flex-col items-center  ">{children}</div>
           </main>
           <Toaster />
           <SideMenu lang={params.lang} />
