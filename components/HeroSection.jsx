@@ -6,6 +6,9 @@ import MyDrawer from "./shared/Draw";
 export default function HeroSection() {
   return (
     <div className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center">
+      <p className="text-3xl font-cairo font-bold text-orangeColor fixed top-0 z-50">
+        {process.env.NODE_ENV === "development" ? process.env.NODE_ENV : null}
+      </p>
       {/* Background Image */}
       <Image
         src={bg}
@@ -42,11 +45,7 @@ export default function HeroSection() {
               v1.0
             </span>
           </p>
-          <p className="text-3xl font-cairo font-bold text-orangeColor fixed top-0">
-            {process.env.NODE_ENV === "development"
-              ? process.env.NODE_ENV
-              : null}
-          </p>
+
           <MyDrawer />
         </div>
       </div>
