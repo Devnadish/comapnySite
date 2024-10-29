@@ -20,11 +20,13 @@ const WhatsAppButton = ({ lang, title }) => {
   return (
     <button
       onClick={handleClick}
-      className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center animate-pulse flex-col"
+      className="  rounded-full size-10 w-fit hover:bg-white/80 flex items-center justify-center   flex-row gap-2 p-2"
       aria-label="WhatsApp"
     >
-      <LogosWhatsappIcon />
-      <span className="text-xs">{title}</span>
+      <div className="animate-pulse">
+        <LogosWhatsappIcon />
+      </div>
+      <span className=" font-tajawal">{title}</span>
     </button>
   );
 };
@@ -75,11 +77,11 @@ export const ContactUs = ({ lang, title }) => {
   return (
     <button
       onClick={handleClick}
-      className="  rounded-full size-10  hover:bg-white/80 flex items-center justify-center flex-col "
+      className="  rounded-full size-10 w-fit hover:text-black hover:bg-white/80 flex items-center justify-center   flex-row gap-2 p-2"
       aria-label={title}
     >
-      <MingcuteSendFill />
-      <span className="text-xs">{title}</span>
+      <MingcuteSendFill width={38} height={38} />
+      <span className="font-tajawal">{title}</span>
     </button>
   );
 };

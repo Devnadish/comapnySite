@@ -8,7 +8,9 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const Navbar = dynamic(() => import("@/components/header/Navbar"));
 const SideMenu = dynamic(() => import("@/components/SideMenu"));
 const Providers = dynamic(() => import("@/Providers/Provider"));
-const Toaster = dynamic(() => import("@/components/ui/toaster").then(mod => mod.Toaster));
+const Toaster = dynamic(() =>
+  import("@/components/ui/toaster").then((mod) => mod.Toaster)
+);
 
 export const metadata = {
   title: {
@@ -45,7 +47,12 @@ export default function RootLayout({ children, params }) {
             <Navbar lang={params.lang} />
           </nav>
           {/* Main content area */}
-          <main className="mb-28 relative">{children}</main>
+          {/* <main className="mb-28 relative">{children}</main> */}
+          <main className="mx-auto  ">
+            <div className="flex min-h-screen flex-col items-center  ">
+              {children}
+            </div>
+          </main>
           <Toaster />
           <SideMenu lang={params.lang} />
         </Providers>

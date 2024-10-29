@@ -37,6 +37,8 @@ async function Services({ lang, title, more }) {
               borderColor="border-greenColor"
               fontColor="text-black"
               more={more}
+              lang={lang}
+              tag={willdo.tag}
             />
           );
         })}
@@ -54,6 +56,7 @@ export function service(willdo) {
         subtitlex: willdo.mobileAppTitle,
         alt: willdo.mobileAppTitle,
         icon: <CarbonApplicationMobile />,
+        tag: "mobile_app",
       },
       {
         id: "webApp",
@@ -61,6 +64,7 @@ export function service(willdo) {
         subtitlex: willdo.webAppTitle,
         alt: willdo.webAppTitle,
         icon: <CarbonApplicationWeb />,
+        tag: "webApp",
       },
       {
         id: "ecommerce",
@@ -68,6 +72,7 @@ export function service(willdo) {
         subtitlex: willdo.ecommerceTitle,
         alt: willdo.ecommerce,
         icon: <MageShop />,
+        tag: "ecommerce",
       },
       {
         id: "design",
@@ -75,6 +80,7 @@ export function service(willdo) {
         subtitlex: willdo.designTitle,
         alt: willdo.designTitle,
         icon: <PhPaintBrushBold />,
+        tag: "design",
       },
       {
         id: "dm",
@@ -82,6 +88,7 @@ export function service(willdo) {
         subtitlex: willdo.digitalMarketingTitle,
         alt: willdo.digitalMarketingTitle,
         icon: <SimpleIconsDm />,
+        tag: "dm",
       },
       {
         id: "em",
@@ -89,6 +96,7 @@ export function service(willdo) {
         subtitlex: willdo.emailMarketingTitle,
         alt: willdo.digitalMarketingTitle,
         icon: <MdiEmailSealOutline />,
+        tag: "em",
       },
     ],
   };

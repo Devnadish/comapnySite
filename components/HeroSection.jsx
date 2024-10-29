@@ -37,6 +37,10 @@ export default function HeroSection() {
           </div>
           <p className="text-3xl font-cairo font-bold text-blueColor bg-yellowColor rounded-lg p-2 w-full z-40 text-center  ">
             Dream To App
+            <span className="text-orangeColor text-[12px] font-extralight align-super">
+              {" "}
+              v1.0
+            </span>
           </p>
           <MyDrawer />
         </div>

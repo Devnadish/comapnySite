@@ -20,7 +20,7 @@ export default function ProductCarousel({ images }) {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-4xl w-full "
+      className="relative max-w-xs sm:max-w-sm md:max-w-md lg:max-w-4xl w-full  "
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
       dir="ltr"
@@ -45,8 +45,9 @@ export default function ProductCarousel({ images }) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+
+      <CarouselPrevious className="hidden sm:block " />
+      <CarouselNext className="hidden sm:block " />
     </Carousel>
   );
 }
